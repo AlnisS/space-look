@@ -9,7 +9,9 @@
 Some quick lighting experiments to get "That Space Look" in Godot based on this Blender tutorial: https://youtu.be/XJBNQeSR8LQ
 
 ISS model: https://solarsystem.nasa.gov/resources/2378/international-space-station-3d-model/
+
 Spaceship model: https://sketchfab.com/3d-models/space-fighter-e766136d4871441289d37d44a4bbcd3b
+
 HDRIs: https://www.deviantart.com/dckiq/art/Orbital-HDRI-Pack-312891203
 
 # How do I run it?
