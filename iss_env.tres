@@ -1,0 +1,35 @@
+[gd_resource type="Environment" load_steps=5 format=2]
+
+[ext_resource path="res://orbital hdri1.jpg" type="Texture" id=1]
+
+[sub_resource type="Gradient" id=2]
+colors = PoolColorArray( 0.0088501, 0, 0.113281, 1, 1, 0.924805, 0.828125, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="PanoramaSky" id=4]
+panorama = ExtResource( 1 )
+
+[resource]
+background_mode = 2
+background_sky = SubResource( 4 )
+background_sky_custom_fov = 59.3
+background_sky_orientation = Basis( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1 )
+tonemap_mode = 2
+tonemap_exposure = 1.29
+tonemap_white = 7.24
+ssao_radius = 4.9
+ssao_intensity = 12.71
+ssao_light_affect = 0.71
+ssao_ao_channel_affect = 0.73
+dof_blur_far_distance = 62.12
+dof_blur_far_transition = 17.37
+glow_enabled = true
+glow_intensity = 0.3
+glow_blend_mode = 1
+glow_bicubic_upscale = true
+glow_high_quality = true
+adjustment_enabled = true
+adjustment_saturation = 0.85
+adjustment_color_correction = SubResource( 3 )
