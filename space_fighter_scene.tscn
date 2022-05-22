@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://space_fighter/space_fighter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://camera_env.tres" type="Environment" id=2]
+[ext_resource path="res://iss_scene.gd" type="Script" id=3]
 
 [sub_resource type="GIProbeData" id=1]
 bounds = AABB( -10, -4.46754, -17, 20, 8.93508, 34 )
@@ -14,39 +15,8 @@ bias = 1.5
 normal_bias = 0.0
 propagation = 0.7
 
-[sub_resource type="Animation" id=2]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("CameraBase:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "rotate"
-length = 12.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("CameraBase:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 12 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 360, 0 ) ]
-}
-
 [node name="SpaceFighterScene" type="Spatial"]
+script = ExtResource( 3 )
 
 [node name="Stand" type="Spatial" parent="."]
 
@@ -73,12 +43,9 @@ data = SubResource( 1 )
 
 [node name="CameraBase" type="Spatial" parent="."]
 
-[node name="Camera" type="Camera" parent="CameraBase"]
-transform = Transform( 0.766056, 0.156666, -0.62339, 0, 0.969842, 0.243733, 0.642774, -0.186713, 0.742953, -41.7166, 17.87, 50.0461 )
+[node name="Pivot" type="Spatial" parent="CameraBase"]
+
+[node name="Camera" type="Camera" parent="CameraBase/Pivot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 55 )
 environment = ExtResource( 2 )
 fov = 20.4
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "rotate"
-anims/RESET = SubResource( 2 )
-anims/rotate = SubResource( 3 )
