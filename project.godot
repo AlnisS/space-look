@@ -21,12 +21,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Space Look"
-run/main_scene="res://space_fighter_scene.tscn"
+run/main_scene="res://iss_scene.tscn"
 config/icon="res://icon.png"
-
-[display]
-
-window/vsync/use_vsync=false
 
 [gdnative]
 

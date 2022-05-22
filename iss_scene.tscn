@@ -68,6 +68,7 @@ light_indirect_energy = 0.0
 [node name="CameraBase" type="Spatial" parent="."]
 
 [node name="Pivot" type="Spatial" parent="CameraBase"]
+transform = Transform( 1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="CameraBase/Pivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 60 )
